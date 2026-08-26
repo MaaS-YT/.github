@@ -4,6 +4,8 @@
 
 ### The companion to my YouTube channel — where we take on real engineering challenges.
 
+*I study how machines learn. I build systems that actually do.*
+
 **Build it. Break it. Measure it. Understand it. Improve it.**
 
 [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)
@@ -21,9 +23,9 @@ I'm **Mohammed "Silva" Sedeg** — an AI Systems Engineer working across LLMs, e
 
 Before AI, I spent years running **PLC/HMI/SCADA** systems and building physical infrastructure — solar trackers, automation lines, hybrid solar-EV systems. That background shapes how I approach software now: I want to know what's happening at the layer underneath, not just how to call the API.
 
-I also founded **[SAiR](https://github.com/SAIR-Org)**, a free, open-source AI research and education initiative that has trained 300+ engineers across 5 African countries.
+I also founded **[SAiR](https://github.com/SAIR-Org)** (سير — "walking on a road"), a free, project-based AI education org that started in Sudan and is now open to learners across Africa, the Middle East, and the Global South. 200+ students have gone through it, and the flagship cohort didn't just learn attention mechanisms from a slide — they built **[miniGPT](https://github.com/SAIR-Org/miniGPT)**, a full GPT trained and served end-to-end, from tokenizer to web UI, with 39 passing tests.
 
-This channel — and this org — is where I document the same kind of hands-on, underneath-the-hood work, applied to modern AI systems: MLOps, inference engines, and Python internals.
+That's the same standard this channel holds itself to: don't just explain the concept, ship the working system. This org is where I document that process for MLOps, inference engines, and Python internals.
 
 > **Full background, production numbers, and project list → [my portfolio](https://silvaxxx1.github.io/MyWebsite/)**
 
@@ -183,11 +185,11 @@ The topics may change. The methodology stays the same:
 
 ## 🔗 Related Work
 
-* **[SAiR Organization](https://github.com/SAIR-Org)** — free AI education for Sudanese & African engineers
-* **[SAiR MLOps Blueprint](https://github.com/SAIR-Org/SAiR-MLOps-Blueprint)**
-* **[SAiRCAMP](https://github.com/SAIR-Org/SAiRCAMP_1)**
+* **[SAiR Organization](https://github.com/SAIR-Org)** — free, project-based AI education, Sudan-founded and open to Africa, the Middle East, and the Global South
+* **[miniGPT](https://github.com/SAIR-Org/miniGPT)** — SAiR's capstone: a GPT built, trained, and deployed from scratch by students
+* **[SAiR Jr. Curriculum](https://github.com/SAIR-Org/SAIR_Jr)** — the full free course, from Python fundamentals to GPT from scratch
 
-MaaS-YT is the companion space for the personal YouTube channel — the place where the problems get solved in public, in detail.
+MaaS-YT is the companion space for the personal YouTube channel. Where SAiR teaches the fundamentals to people starting out, MaaS-YT is where I go past the fundamentals — into the harder, less-charted territory of inference engines and systems performance — and solve those problems in public, in detail.
 
 ---
 
