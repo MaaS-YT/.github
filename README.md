@@ -1,26 +1,35 @@
+<div align="center">
+
 # MaaS-YT
 
 ### The companion to my YouTube channel — where we take on real engineering challenges.
 
-This organization contains the **code, experiments, notes, projects, and technical deep dives** behind my YouTube channel.
+**Build it. Break it. Measure it. Understand it. Improve it.**
 
-The channel is not built around simply explaining tools.
+[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube)](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)
+[![Portfolio](https://img.shields.io/badge/Portfolio-B45309?style=for-the-badge)](https://silvaxxx1.github.io/MyWebsite/)
+[![SAiR](https://img.shields.io/badge/SAiR_Org-181717?style=for-the-badge)](https://github.com/SAIR-Org)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mohammed-sedeg-67444b307/)
 
-We take on real challenges:
-
-> **Build it. Break it. Measure it. Understand it. Improve it.**
-
-Sometimes that means building an MLOps system from scratch.
-
-Sometimes it means going underneath an LLM inference engine to understand why it is fast.
-
-Sometimes it means profiling Python, optimizing a workload, or understanding what is happening between the model, software, and hardware.
-
-The repositories here are the **companion material** for those journeys.
+</div>
 
 ---
 
-# 🎥 What You Will Find Here
+## 👋 Who's Behind This
+
+I'm **Mohammed "Silva" Sedeg** — an AI Systems Engineer working across LLMs, edge AI, and MLOps, and a PhD candidate at Karabük University researching vision-language models and model optimization for constrained hardware.
+
+Before AI, I spent years running **PLC/HMI/SCADA** systems and building physical infrastructure — solar trackers, automation lines, hybrid solar-EV systems. That background shapes how I approach software now: I want to know what's happening at the layer underneath, not just how to call the API.
+
+I also founded **[SAiR](https://github.com/SAIR-Org)**, a free, open-source AI research and education initiative that has trained 300+ engineers across 5 African countries.
+
+This channel — and this org — is where I document the same kind of hands-on, underneath-the-hood work, applied to modern AI systems: MLOps, inference engines, and Python internals.
+
+> **Full background, production numbers, and project list → [my portfolio](https://silvaxxx1.github.io/MyWebsite/)**
+
+---
+
+## 🎥 What You'll Find Here
 
 The material covers the engineering layers behind modern AI systems:
 
@@ -42,212 +51,110 @@ Systems
 Hardware
 ```
 
-The objective is not to cover everything.
-
-It is to go deep enough into a problem to understand **what is actually happening underneath the abstraction**.
+The goal isn't to cover everything. It's to go deep enough into a problem to understand **what is actually happening underneath the abstraction**.
 
 ---
 
-# 🔥 Current Challenge
+## 🔥 Current Challenge
 
-## MLOps from First Principles
-
+### MLOps from First Principles
 **Status: 🟢 Complete**
 
 We started with a practical question:
 
 > **You have a machine learning model. How do you turn it into a production system?**
 
-Instead of jumping directly into tools, the series builds the system layer by layer.
+Instead of jumping straight into tools, the series builds the system layer by layer.
 
 ```text
-Model
-  ↓
-Serving
-  ↓
-Reproducibility
-  ↓
-Data Engineering
-  ↓
-Model Optimization
-  ↓
-Cloud Infrastructure
-  ↓
-Observability
+Model → Serving → Reproducibility → Data Engineering
+      → Model Optimization → Cloud Infrastructure → Observability
 ```
 
-### What we built and explored
+| Module | Challenge                                 | Technologies                                                  |
+| ------ | ------------------------------------------ | --------------------------------------------------------------- |
+| **01** | How does anything call the model?          | FastAPI, Docker                                                  |
+| **02** | How do we reproduce experiments?           | Git, DVC, MLflow, W&B                                            |
+| **03** | How does data reach the model?             | Feast, Prefect, Spark                                            |
+| **04** | How do we make models smaller and faster?  | Pruning, Quantization, KD, ONNX, TorchScript, LibTorch, gRPC     |
+| **05** | How do we run this in production?          | Kubernetes, AWS, EKS                                             |
+| **06** | How do we know the system is degrading?    | Evidently, Prometheus, Grafana                                   |
 
-| Module | Challenge                                 | Technologies                                                 |
-| ------ | ----------------------------------------- | ------------------------------------------------------------ |
-| **01** | How does anything call the model?         | FastAPI, Docker                                              |
-| **02** | How do we reproduce experiments?          | Git, DVC, MLflow, W&B                                        |
-| **03** | How does data reach the model?            | Feast, Prefect, Spark                                        |
-| **04** | How do we make models smaller and faster? | Pruning, Quantization, KD, ONNX, TorchScript, LibTorch, gRPC |
-| **05** | How do we run this in production?         | Kubernetes, AWS, EKS                                         |
-| **06** | How do we know the system is degrading?   | Evidently, Prometheus, Grafana                               |
-
-### Companion repository
-
-**[MLOps from First Principles](https://github.com/MaaS-YT/MLOps-from-the-first-principles)**
-
-The repository contains the written material, diagrams, experiments, and references accompanying the videos.
-
-### ▶️ Playlist
-
-**[MLOps from First Principles](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)**
+**Repo:** [MLOps from First Principles](https://github.com/MaaS-YT/MLOps-from-the-first-principles)
+**Playlist:** [Watch on YouTube](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)
 
 ---
 
-# 🚧 What's Next
+## 🚧 What's Next
 
-The next challenges move deeper into **AI systems**.
-
----
-
-# ⚡ Head First into Inference Engineering
-
-### Long-Format Technical Deep Dive
-
+### ⚡ Head First into Inference Engineering
 **Status: 🟡 In Development**
 
-I've spent a lot of time working with **vLLM** and **SGLang**, building applications and systems on top of them.
+I've spent real time building on top of **vLLM** and **SGLang** in production — but using the abstraction only gets you so far. This series goes underneath it.
 
-But eventually you reach a point where using the abstraction isn't enough.
-
-You want to know:
-
-> **What is actually happening underneath?**
-
-So this challenge is about going head first into **LLM inference engineering**.
-
-I'm currently studying the subject through:
-
-* *Inference Engineering*
-* Fast & Efficient LLM Inference with vLLM
-* Efficient Inference with SGLang
-* Fast LLM Inference with Cerebras
-
-But the goal is not to summarize any of them.
-
-The real work is:
+Studying through *Inference Engineering*, *Fast & Efficient LLM Inference with vLLM*, *Efficient Inference with SGLang*, and *Fast LLM Inference with Cerebras* — but the goal isn't to summarize them. The work is:
 
 ```text
-Study
-  ↓
-Implement
-  ↓
-Benchmark
-  ↓
-Profile
-  ↓
-Optimize
-  ↓
-Benchmark again
-  ↓
-Understand why
+Study → Implement → Benchmark → Profile → Optimize → Benchmark again → Understand why
 ```
 
-We'll investigate things such as:
+Topics on deck: prefill vs. decode, KV cache, continuous batching, scheduling, memory bandwidth, GPU utilization, latency, throughput, quantization, kernel efficiency, and hardware/software interaction.
 
-* Prefill vs. decode
-* KV cache
-* Continuous batching
-* Scheduling
-* Memory bandwidth
-* GPU utilization
-* Latency
-* Throughput
-* Quantization
-* Kernel efficiency
-* Inference architectures
-* vLLM
-* SGLang
-* Hardware/software interaction
+> **The central question: why is an inference system fast? Not: how do I call an inference API?**
 
-The central question is:
-
-> **Why is an inference system fast?**
-
-Not:
-
-> **How do I call an inference API?**
+This builds directly on production work I've shipped — including ~3× faster LLM inference via GGUF/ExLlamaV2 quantization and a ~40% RAG latency reduction through pipeline optimization. Now we go build and benchmark that from the ground up, on camera.
 
 ---
 
-# 🐍 Python Mastery Hub
-
-### Advanced Python for AI Engineers
-
+### 🐍 Python Mastery Hub
 **Status: 🟡 In Development**
-
-Another challenge is closer to the foundation:
 
 > **Can I actually use Python as a systems engineering tool?**
 
-Knowing Python syntax is not the same as understanding Python deeply enough to build efficient, maintainable AI infrastructure.
-
-The curriculum goes from the Python data model toward:
+Knowing syntax isn't the same as understanding Python deeply enough to build efficient, maintainable AI infrastructure.
 
 ```text
-Data Model
-    ↓
-Data Structures
-    ↓
-Functions & Types
-    ↓
-Iterators
-    ↓
-NumPy
-    ↓
-Compilation
-    ↓
-Classes & Protocols
-    ↓
-Concurrency
-    ↓
-Async
-    ↓
-Production AI Systems
+Data Model → Data Structures → Functions & Types → Iterators → NumPy
+           → Compilation → Classes & Protocols → Concurrency → Async
+           → Production AI Systems
 ```
 
-### The challenge
+Every concept ties back to real AI engineering: PyTorch tensors, Dataset/DataLoader, profiling, numerical computing, configuration systems, concurrency, inference services.
 
-We don't stop at Python examples.
-
-We connect Python concepts directly to AI engineering:
-
-* PyTorch
-* tensors
-* Dataset / DataLoader
-* profiling
-* numerical computing
-* configuration systems
-* concurrency
-* inference services
-
-### Checkpoint projects
-
-The curriculum will build:
-
+**Checkpoint projects:**
 1. Dataset + DataLoader from scratch
 2. NumPy minibatch trainer + Numba optimization
 3. Tiny `nn.Module`-style API
 4. FastAPI inference endpoint with a warm process pool
 
-### Companion repository
-
-**[Python Mastery Hub](https://github.com/MaaS-YT/python-mastery-hub)**
+**Repo:** [Python Mastery Hub](https://github.com/MaaS-YT/python-mastery-hub)
 
 ---
 
-# 🗺️ The Direction
+## 📚 Current & Upcoming
 
-These projects are not isolated courses.
+| Project                                   | Focus                             | Status             |
+| ------------------------------------------- | ------------------------------------ | --------------------- |
+| **MLOps from First Principles**             | Production ML systems               | 🟢 Complete         |
+| **Head First into Inference Engineering**   | LLM inference & performance         | 🟡 In Development   |
+| **Python Mastery Hub**                      | Advanced Python for AI engineers    | 🟡 In Development   |
+| **AI Systems Experiments**                  | Systems, performance & hardware     | 🔵 Future           |
 
-They are steps toward a larger engineering question:
+---
 
-> **How do we build AI systems that are actually fast, reliable, scalable, and understandable?**
+## 🧪 How We Work
+
+Every challenge follows the same loop:
+
+```text
+Problem → Understand → Build → Measure → Break → Optimize → Understand
+```
+
+These repos aren't just notes — they're **working records of the challenges**, built the same way I build things in production: MyTorch (a PyTorch-from-scratch framework going down to custom CUDA/Triton kernels), MyLLM (a full pretrain-to-RLHF pipeline), and a production RAG platform are all part of the same philosophy applied elsewhere. See them on [my GitHub](https://github.com/silvaxxx1).
+
+---
+
+## 🗺️ The Direction
 
 ```text
                  REAL CHALLENGES
@@ -268,99 +175,37 @@ They are steps toward a larger engineering question:
               Production Systems
 ```
 
-The topics may change.
-
-The methodology stays the same:
+The topics may change. The methodology stays the same:
 
 > **Take a real problem. Go underneath the abstraction. Build something. Measure it. Understand it.**
 
 ---
 
-# 🧪 How We Work
+## 🔗 Related Work
 
-Every challenge follows roughly the same loop:
-
-```text
-                 ┌──────────────┐
-                 │    Problem   │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │   Understand │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │     Build    │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │   Measure    │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │    Break     │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │   Optimize   │
-                 └──────┬───────┘
-                        ↓
-                 ┌──────────────┐
-                 │  Understand  │
-                 └──────────────┘
-```
-
-This means the repositories are not just collections of notes.
-
-They are **working records of the challenges**.
-
----
-
-# 📚 Current & Upcoming
-
-| Project                                   | Focus                            | Status            |
-| ----------------------------------------- | -------------------------------- | ----------------- |
-| **MLOps from First Principles**           | Production ML systems            | 🟢 Complete       |
-| **Head First into Inference Engineering** | LLM inference & performance      | 🟡 In Development |
-| **Python Mastery Hub**                    | Advanced Python for AI engineers | 🟡 In Development |
-| **AI Systems Experiments**                | Systems, performance & hardware  | 🔵 Future         |
-
----
-
-# 🔗 Related Work
-
-Some challenges connect to the broader SAiR learning ecosystem:
-
-* **[SAiR Organization](https://github.com/SAIR-Org)**
+* **[SAiR Organization](https://github.com/SAIR-Org)** — free AI education for Sudanese & African engineers
 * **[SAiR MLOps Blueprint](https://github.com/SAIR-Org/SAiR-MLOps-Blueprint)**
 * **[SAiRCAMP](https://github.com/SAIR-Org/SAiRCAMP_1)**
 
-MaaS-YT is specifically the **companion space for the personal YouTube channel** — where the focus is on taking on technical problems and working through them publicly.
+MaaS-YT is the companion space for the personal YouTube channel — the place where the problems get solved in public, in detail.
 
 ---
 
-# 🎬 Start Here
+## 🎬 Start Here
 
-### Current Series
+**[▶️ MLOps from First Principles](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)** — start with the production ML system.
 
-**[MLOps from First Principles](https://youtube.com/playlist?list=PLVM9Nqm8zLE0)**
+**Next up:** Head First into Inference Engineering — going underneath modern LLM inference.
 
-Start with the production ML system.
-
-### Next Challenge
-
-**Head First into Inference Engineering**
-
-Go underneath modern LLM inference.
-
-### Building the Foundation
-
-**Python Mastery Hub**
-
-Develop the Python depth required for serious AI engineering.
+**Building the foundation:** Python Mastery Hub — the Python depth serious AI engineering requires.
 
 ---
+
+<div align="center">
 
 > **We don't just learn the tools.**
->
 > **We take on the problem, go underneath the abstraction, and figure out how it actually works.**
+
+📬 [Email](mailto:silvapi1994@gmail.com) · [LinkedIn](https://www.linkedin.com/in/mohammed-sedeg-67444b307/) · [Portfolio](https://silvaxxx1.github.io/MyWebsite/) · [SAiR](https://t.me/+jPPlO6ZFDbtlYzU0)
+
+</div>
